@@ -17,5 +17,9 @@ class Animal extends Model
     {
         return $this->BelongsTo(Enclosure::class);
     }
+    public function keepers()
+    {
+        return $this->BelongsToMany(Keeper::class);
+    }
 
 }
