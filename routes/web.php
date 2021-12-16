@@ -13,9 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/home', function () {
+    return "This is the home page";
 });
+
+Route::get('/work', function () {
+    return "This is the work page";
+});
+
+Route::redirect('/work', '/home', 301);
+
+
+
+Route::any('users/{id?}', function ($id = 'John doe') {
+    return "User page ".$id;
+});
+
+Route::any('users/{id?}/comment/{commentId?}', function ($id = 'John doe', $commentId = 'null') {
+    return "User page ".$id. " comment id ".$commentId;
+});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
