@@ -1,11 +1,11 @@
 <?php
 
 namespace Database\Factories;
-use App\Models\EmergencyContact;
+use App\Models\Enclosure;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class EmergencyContactFactory extends Factory
+class EnclosureFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -16,8 +16,6 @@ class EmergencyContactFactory extends Factory
     {
         return [
             'name' => $this->faker->firstName(),
-            'phone_number' => $this->faker->phoneNumber(),
-            'animal_id' => $this->faker->numberBetween(2, 11),
         ];
     }
 }

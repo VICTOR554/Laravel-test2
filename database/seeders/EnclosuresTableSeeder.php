@@ -16,5 +16,8 @@ class EnclosuresTableSeeder extends Seeder
         $e = new Enclosure;
         $e->name = "Central Enclosure";
         $e->save();
+
+        $enclosures = Enclosure::factory()->count(10)->create();
+
     }
 }
