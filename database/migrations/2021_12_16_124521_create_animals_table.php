@@ -15,7 +15,11 @@ class CreateAnimalsTable extends Migration
     {
         Schema::create('animals', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->double('weight');
+            $table->dateTime('date_of_birth')->nullable();
             $table->timestamps();
+
         });
     }
 
