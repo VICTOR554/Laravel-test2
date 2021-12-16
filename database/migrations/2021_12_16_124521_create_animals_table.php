@@ -16,7 +16,7 @@ class CreateAnimalsTable extends Migration
         Schema::create('animals', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->double('weight');
+            $table->double('weight', 8 , 2);
             $table->dateTime('date_of_birth')->nullable();
             $table->bigInteger('enclosure_id')->unsigned();
             $table->timestamps();
