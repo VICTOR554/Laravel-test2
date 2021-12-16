@@ -14,10 +14,13 @@ class EmergencyContactTableSeeder extends Seeder
      */
     public function run()
     {
-        $e = new EmergencyContact;
-        $e->name = "Max";
-        $e->phone_number = "0000000";
-        $e->animal_id = 1;
-        $e->save();
+        $ec = new EmergencyContact;
+        $ec->name = "Max";
+        $ec->phone_number = "0000000";
+        $ec->animal_id = 1;
+        $ec->save();
+
+        $emergencyContact = EmergencyContact::factory()->count(10)->create();
+
     }
 }
