@@ -15,6 +15,7 @@ class CreateKeepersTable extends Migration
     {
         Schema::create('keepers', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->timestamps();
         });
     }
